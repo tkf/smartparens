@@ -298,6 +298,7 @@ Feature: Autoinsert pairs
       And I press "[ SPC"
      Then I should see "[  ]"
 
+  @insert-a-pair-in-minibuffer
   Scenario: Insert a pair in minibuffer
     Given I set sp-ignore-modes-list to nil
       And I turn on smartparens globally
