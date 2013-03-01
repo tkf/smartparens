@@ -60,6 +60,9 @@
                      (:open "{"     :close "}"     :actions (insert wrap))
                      (:open "`"     :close "'"     :actions (insert wrap))))))
 
+ ;; Rest customs
+ (custom-reevaluate-setting 'sp-ignore-modes-list)
+
  ;; reset the state between scenarios to not interfere
  (setq sp-escape-char nil)
  (setq sp-pair-list nil)
