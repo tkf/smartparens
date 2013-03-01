@@ -302,6 +302,13 @@ Feature: Autoinsert pairs
   Scenario: Insert a pair in minibuffer
     Given I set sp-ignore-modes-list to nil
       And I turn on smartparens globally
+     # This "When" block should not be needed, but this scenario fails
+     # without it if it is the first scenario to be executed.
+     When I start an action chain
+      And I press "M-:"
+      And I type "nil"
+      And I press "RET"
+      And I execute the action chain
      When I start an action chain
       And I press "M-:"
       And I type "("
