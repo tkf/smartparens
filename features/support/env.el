@@ -20,6 +20,10 @@
 (require 'espuds)
 (require 'ert)
 
+;; We can't load org in scenario.
+;; See https://github.com/rejeep/espuds/issues/12
+(require 'org)
+
 
 (Setup
  ;; Before anything has run
